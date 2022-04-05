@@ -9,7 +9,8 @@ public class Main {
 		
 		
 		
-		int opcion=0,opcion1=0,opcion2=0,nro1=0,nro2=0;
+		int opcion=0,opcion2=0,nro1=0,nro2=0;
+		char opcion1=0;
 		boolean valido=true,valido1=true,valido2=true;
 		
 		int array[]= new int[10];
@@ -25,9 +26,9 @@ public class Main {
 					
 					
 					menu();
-					opcion1=scan.nextInt();
+					opcion1=scan.next().charAt(0);
 					
-					if(opcion1>0 && opcion1<5) {
+					if((opcion1>='a' && opcion1<='d') || opcion=='0') {
 						System.out.println("Ingrese un numero");
 						nro1=scan.nextInt();
 						System.out.println("Ingrese otro numero");
@@ -37,23 +38,23 @@ public class Main {
 				
 					
 					switch(opcion1) {
-					case 1:
+					case 'a':
 						System.out.println("El resultado de la suma entre "+nro1+" + "+nro2+" es: "+ suma(nro1, nro2));
 						break;
-					case 2:
+					case 'b':
 						System.out.println("El resultado de la resta entre "+nro1+" - "+nro2+" es: "+ resta(nro1, nro2));	
 						break;
-					case 3:
+					case 'c':
 						System.out.println("El resultado de la multiplicacion entre "+nro1+" * "+nro2+" es: "+ multiplicacion(nro1, nro2));
 						break;
-					case 4:
+					case 'd':
 						if(nro2!=0) {
 							System.out.println("El resultado de la division entre "+nro1+" / "+nro2+" es: "+ division(nro1, nro2));
 						}else {
 							System.out.println("Error matematico!!!!");
 						}
 						break;
-					case 0:
+					case '0':
 						valido1 = false;
 						break;
 					default:
@@ -121,16 +122,14 @@ public class Main {
 				}while(valido2==true);
 				
 				
-				cargaArray(array);
-				MuestraArray(array);
+		
+				break;
+			case 4:
 				
-				OrdenacionAscendente(array);
-				
-				MuestraArray(array);
-				
-				OrdenacionDescendente(array);
-				
-				MuestraArray(array);
+				break;
+			case 5:
+				break;
+			case 6: 
 				break;
 			case 0:
 				valido =false;
@@ -158,10 +157,10 @@ public class Main {
 	//1
 	public static void menu() {
 	System.out.println("\n\t\t<<<CALCULADORA>>>\n\n");
-	System.out.println("|1|. SUMA");
-	System.out.println("|2|. RESTA");
-	System.out.println("|3|. MULTIPLICACION");
-	System.out.println("|4|. DIVISION");
+	System.out.println("|a|. SUMA");
+	System.out.println("|b|. RESTA");
+	System.out.println("|c|. MULTIPLICACION");
+	System.out.println("|d|. DIVISION");
 	System.out.println("\n\n|0|. Para salir...");
 	}
 	
@@ -303,7 +302,17 @@ public static void OrdenacionDescendente(int array[]) {
     }
 }
 
+public static void ejercicio4() {
+		
+	}
 	
+public static void ejercicio5() {
+		
+	}
+public static void ejercicio6() {
+	
+}
+
 	
 	
 	
