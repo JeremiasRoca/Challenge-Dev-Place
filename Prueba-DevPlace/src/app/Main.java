@@ -11,12 +11,28 @@ public class Main {
 
 		Scanner scan = new Scanner(System.in);
 		
-		Triangulo tri = new Triangulo(1,1,2);
-		System.out.println(tri.quienSoy());
-		
+		int lado1,lado2,lado3;
 		boolean flag=true;
 		int nro;
 		
+		System.out.println("Ingrese lado nro° 1");
+		lado1 = scan.nextInt();
+		System.out.println("Ingrese lado nro° 2");
+		lado2 = scan.nextInt();
+		System.out.println("Ingrese lado nro° 3");
+		lado3 = scan.nextInt();
+		
+		Triangulo tri = new Triangulo(lado1,lado2,lado3);
+		
+		int ejemplo[]= {1,2,4,5};
+		
+		for(int i=0;i<ejemplo.length;i++) {
+			System.out.println("valor: "+ejemplo[i]);
+		}
+		
+		System.out.println(tri.quienSoy());
+		
+		        
 		System.out.println("Ingrese un numero");
 		nro = scan.nextInt();
 		
@@ -72,5 +88,7 @@ public class Main {
 		}
 		return flag;
 	}
+	
+	
 
 }
