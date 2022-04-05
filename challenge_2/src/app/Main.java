@@ -125,7 +125,7 @@ public class Main {
 		
 				break;
 			case 4:
-				
+				ejercicio4();
 				break;
 			case 5:
 				break;
@@ -303,7 +303,27 @@ public static void OrdenacionDescendente(int array[]) {
 }
 
 public static void ejercicio4() {
+		String array[] = {"coder", "devplace", "personas", "curso", "alumnado"};
+		String aux;
+		for (int i = 0; i < array.length - 1; i++) {
+	        for (int j = i + 1; j < array.length; j++) {
+	        	if(array[i].compareTo( array[j])>0) {// segunda cadena es mas grande
+	       
+	                aux = array[i];
+	                array[i] = array[j];
+	                array[j] = aux;
+	            }
+	        }
+	    }
 		
+		
+		System.out.println("\n");
+		for(int i=0;i<array.length;i++) {
+			
+				System.out.print(array[i]+" - ");
+			
+			
+		}
 	}
 	
 public static void ejercicio5() {
