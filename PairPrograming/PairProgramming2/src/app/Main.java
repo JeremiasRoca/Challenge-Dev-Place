@@ -38,6 +38,10 @@ listaD.reproducirLista();
 System.out.println("PREMIUM");
 listaP.reproducirLista();
 
+listaP.ordenaLista();
+
+System.out.println("PREMIUM");
+listaP.reproducirLista();
 
 
 

@@ -2,6 +2,8 @@ package app;
 
 import java.util.Scanner;
 
+import model.Ahorcado;
+
 public class Main {
 
 	static Scanner scan = new Scanner(System.in);
@@ -125,9 +127,10 @@ public class Main {
 		
 				break;
 			case 4:
-				ejercicio4();
+				ejercicioPractica();
 				break;
 			case 5:
+				ejercicio4();
 				break;
 			case 6: 
 				break;
@@ -151,6 +154,7 @@ public class Main {
 		System.out.println("|1|. Calculadora");
 		System.out.println("|2|. View Minusculas ");
 		System.out.println("|3|. Array");
+		System.out.println("|4|. Ejercicio practica");
 		System.out.println("\n\n|0|. Para salir...");
 		}
 	
@@ -283,6 +287,8 @@ public static void OrdenacionAscendente(int array[]) {
                 aux = array[i];
                 array[i] = array[j];
                 array[j] = aux;
+                
+                
             }
         }
     }
@@ -302,7 +308,7 @@ public static void OrdenacionDescendente(int array[]) {
     }
 }
 
-public static void ejercicio4() {
+public static void ejercicioPractica() {
 		String array[] = {"coder", "devplace", "personas", "curso", "alumnado"};
 		String aux;
 		for (int i = 0; i < array.length - 1; i++) {
@@ -325,9 +331,36 @@ public static void ejercicio4() {
 			
 		}
 	}
+public static void ejercicio4() {
+	int paises=5,ciudades=3;
+	String array[][]= new String[ciudades+1][paises];
 	
+	for(int i=0;i<paises;i++) {
+		int j=0;
+		System.out.println("Ingrese el pais nro "+(i+1));
+		array[0][i]=scan.next();
+		for(j=1;j<ciudades+1;j++) {
+			System.out.println("Ingrese la ciudad nro "+(j));
+			array[j][i]=scan.next();
+		}
+	}
+	
+	System.out.println("mostrar");
+	
+	for(int i=0;i<paises;i++) {
+		System.out.println("Paises");
+
+		for(int j=0;j<ciudades;j++) {
+			System.out.println(array[j][i]);
+		}
+	}
+	
+}	
+
 public static void ejercicio5() {
-		
+
+	Ahorcado juego = new Ahorcado ("palabrita");			
+	
 	}
 public static void ejercicio6() {
 	

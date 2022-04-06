@@ -38,14 +38,20 @@ private ArrayList<Cancion> array;
 	}
 	
 	public void ordenaLista() {
+		
 		Cancion aux;
-		for (int i = 0; i < array.size() - 1; i++) {
-	        for (int j = i + 1; j < array.size(); j++) {
-	        	if(array.get(i).getNombre().compareTo( array.get(j).getNombre())>0) {// segunda cadena es mas grande
-	       
+		for (int i = 0; i < array.size(); i++) {
+	        for (int j = 0; j < array.size(); j++) {
+	        	String a =array.get(i).getNombre();
+	        	String b =array.get(j).getNombre();
+	        	if(a.compareTo( b)>0) {// segunda cadena es mas grande
+	
 	                aux = array.get(i);
+	 
 	                array.add(i, array.get(j));
+	           	
 	                array.add(j, aux);
+
 	     
 	            }
 	        }
