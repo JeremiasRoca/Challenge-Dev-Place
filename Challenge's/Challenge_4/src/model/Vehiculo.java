@@ -23,8 +23,8 @@ public abstract class Vehiculo {
 		return this.velocidad;
 	}
 	
-	public void acelerar(float cantidadKm) throws Exception {
-		velocidad = cantidadKm;
+	public void acelerar(float cantidadKm) throws EDemasiadoRapidoException {
+		velocidad += cantidadKm;
 	}
 	
 	@Override

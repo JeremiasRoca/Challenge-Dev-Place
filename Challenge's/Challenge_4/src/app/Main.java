@@ -1,6 +1,7 @@
 package app;
 
 import model.Carga;
+import model.EDemasiadoRapidoException;
 import model.Particular;
 import model.Remolque;
 
@@ -19,7 +20,7 @@ public class Main {
 		
 		try {
 			parti1.acelerar(800);
-		} catch (Exception e) {
+		} catch (EDemasiadoRapidoException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
@@ -33,8 +34,9 @@ public class Main {
 		System.out.println(car1.toString());
 	
 			try {
+				car1.acelerar(20);
 				car1.acelerar(500);
-			} catch (Exception e) {
+			} catch (EDemasiadoRapidoException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}

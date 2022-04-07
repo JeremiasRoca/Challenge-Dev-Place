@@ -23,17 +23,14 @@ public class Carga extends Vehiculo{
 		return this.remo==null; 
 	}
 	
-	public void acelerar(float cantidadKm) throws Exception {
+	public void acelerar(float cantidadKm) throws EDemasiadoRapidoException {
 
-		if(this.remo!=null && cantidadKm >=100) {
+		if(this.remo!=null && cantidadKm+super.getVelocidad() >=100) {
 		
-			throw new Exception("Demasiado Rapido!!!!!!!!");
-		
-		
-	}else {
-		System.out.println("no");
-		super.setVelocidad(cantidadKm);
-	}
+			throw new EDemasiadoRapidoException("Demasiado Rapido!!!!!!!!");
+		}
+		super.setVelocidad(super.getVelocidad()+cantidadKm);
+	
 	}
 	
 
