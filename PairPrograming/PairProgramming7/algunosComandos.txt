@@ -1,0 +1,17 @@
+
+INSERT INTO estudiante (nombre,fechaNacimiento,idCarrera)VALUES  ("pepe",2000-04-10,4);
+INSERT INTO estudiante (nombre,fechaNacimiento,idCarrera)VALUES ("juana",2000-04-10,6);
+INSERT INTO estudiante (nombre,fechaNacimiento,idCarrera)VALUES ("oscar",2000-04-10,8);
+
+INSERT INTO profesor (nombre,fechaNacimiento,materia,idCarrera)VALUES ("horacio",2000-04-10,"programacion",1);
+INSERT INTO profesor (nombre,fechaNacimiento,materia,idCarrera)VALUES ("osvaldo",2000-04-10,"economia",2);
+INSERT INTO profesor (nombre,fechaNacimiento,materia,idCarrera)VALUES ("sergio",2000-04-10,"sociales",3);
+
+INSERT INTO legajo (nro,idEstudiante)VALUES (1,1);
+INSERT INTO legajo(nro,idEstudiante) VALUES (54,2);
+INSERT INTO legajo (nro,idEstudiante)VALUES (520,3);
+
+select e.nombre,e.idEstudiante,e.idCarrera, c.nombre,c.idCarrera,l.nro from estudiante e 
+inner join carrera c on c.idCarrera = e.idCarrera
+inner join legajo l on l.idEstudiante = e.idEstudiante
+where e.idEstudiante>2;
