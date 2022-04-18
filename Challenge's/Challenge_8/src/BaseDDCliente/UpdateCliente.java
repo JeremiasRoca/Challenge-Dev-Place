@@ -1,12 +1,14 @@
-package conexionBDconecxionBD;
+package BaseDDCliente;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class UpdateClass {
+
+public class UpdateCliente {
+	
 	public boolean insertado = false;
-	public UpdateClass() throws SQLException{
-		BaseDeDatos dbc = new BaseDeDatos();
+	public UpdateCliente() throws SQLException{
+		BDDCliente dbc = new BDDCliente();
 		if(dbc.getConnection()!=null) {
 			try {
 				String query= "UPDATE cliente SET nombre =?,apellido=? where id =?";
@@ -22,5 +24,4 @@ public class UpdateClass {
 		}
 		
 	}
-
 }

@@ -1,0 +1,29 @@
+5)-- Filtre todas las ventas de un cliente donde su nombre contenga la letra a.
+
+create view clienteConA as
+select * from cliente WHERE cliente.nombre LIKE  '%a%';
+
+6)-- Filtre todos los productos que se vendieron.
+
+create view productosVendidos as
+select * from productos WHERE productos.vendido = 1;
+
+
+7) -- Filtre todas las ventas por vendedor mostrando solo los datos del vendedor y el total vendido.
+
+create view ventasVendedor as
+select v.nombre,v.apellido,v.dni,v.direccion,v.salario,v.fechaNacimiento,f.nroFactura,f.fechaCompra,f.detalleProductos from vendedor v
+INNER JOIN facturacion f on f.vendedorFactura = v.nombre
+
+falta sumar
+
+8) -- Cree un Trigger, que permite modificar el valor de la cantidad de los productos al momento de realizar una venta.
+
+
+create trigger modificaProducto 
+AFTER insert on facturacion for each row
+
+UPDATE productos SET productos.stockMinimo = productos.stockMinimo-productosvendidos;
+;
+
+9)preguntar como quiere el filtrado, pedir por parametros?
