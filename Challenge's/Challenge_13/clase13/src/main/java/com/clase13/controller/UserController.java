@@ -69,12 +69,13 @@ public class UserController {
     })
     @ApiParam(value = "usuario x body")
     @PostMapping("/add")
-    public ResponseEntity<User> addOne(@RequestBody User users){
+    public ResponseEntity<User> addOne(@Valid @RequestBody User users){
         try {
             User user=ur.save(new User(users.getNombre(), users.getApellido(), users.getDireccion(), users.getDni()));
             return new ResponseEntity<>(user, HttpStatus.CREATED);
         }catch( Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+
         }
     }
 

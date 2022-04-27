@@ -3,7 +3,12 @@ package com.clase13.model;
 import io.swagger.annotations.ApiModelProperty;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-
+@Entity
+@Table(name = "users",
+uniqueConstraints = {
+        @UniqueConstraint(columnNames ="nombre"),
+        @UniqueConstraint(columnNames ="direccion")
+        })
 @Document(collection = "usuarios")
 public class User {
 
