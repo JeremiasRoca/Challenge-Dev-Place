@@ -8,7 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-public class UserController {
+public class UserController{
 
     @Autowired
     private UserService us;

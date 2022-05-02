@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Example of View</title>
+
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">Create Player</a>
+
+    <!-- Toggler/Collapse Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+</nav>
+
+
+<br> <br>
+<div class = "container">
+    <div style="text-align: center">
+        <h1 >YOUR TICKET</h1><br><br>
+        <h3>ID AUTO:  </h3><h4 th:text="${ticket.autoId}" ></h4><br>
+
+        <h3>DETALLE:  </h3><h4 th:text="${ticket.detalle}" ></h4><br>
+
+    </div>
+</div>
+
+
+
+
+        <!-- /.container -->
+        <script th:src="@{webjars/jquery/1.9.1/jquery.min.js}"></script>
+        <script type="text/javascript" th:src="@{webjars/bootstrap/3.3.6/js/bootstrap.min.js}"></script>
+
+</body>
+</html>
+
