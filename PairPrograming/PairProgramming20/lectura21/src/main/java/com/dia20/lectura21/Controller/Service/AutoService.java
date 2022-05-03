@@ -3,6 +3,8 @@ package com.dia20.lectura21.Controller.Service;
 import com.dia20.lectura21.Controller.Repository.AutoRepository;
 import com.dia20.lectura21.Model.Auto;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -22,6 +24,7 @@ public class AutoService {
     }
 
 
+
     public boolean saveAuto(Auto auto) {
         ar.save(auto);
         return true;
@@ -31,5 +34,7 @@ public class AutoService {
         ar.delete(user);
         return true;
     }
+
+
 
 }
