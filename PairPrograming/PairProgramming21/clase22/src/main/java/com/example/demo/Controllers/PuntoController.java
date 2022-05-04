@@ -49,7 +49,7 @@ public class PuntoController {
     }
 
     @DeleteMapping("/{id}")
-    public void deleteById(@PathVariable long id){
+    public void deleteById(@PathVariable("id") long id){
         ps.deleteById(id);
     }
 
